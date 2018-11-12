@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ovelse2_2</string>
+
+    <string name="addition">Adder</string>
+    <string name="multiplication">Multipliser</string>
+    <string name="answer">Svar:</string>
+    <string name="limit">Øvre grense:</string>
+    <string name="correct">Riktig!</string>
+    <string name="wrong">Feil. Riktig svar er</string>
+</resources>

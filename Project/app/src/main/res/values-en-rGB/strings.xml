@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="end_game">End game</string>
+    <string name="success">You found the correct word</string>
+    <string name="failure">Unlucky, the person was hanged, try again</string>
+    <string name="new_game">New game</string>
+    <string name="next">Press any button to continue playing</string>
+    <string name="info">How to play: A random word is chosen, du only get to know how many letters that word contains,
+        to win you have to correctly guess all the letters the word consists of, before the person
+    </string>
+    <string name="help">Help</string>
+    <string name="back">Go Back</string>
+    <string name="lang">Change language</string>
+    <string name="nrCorrect">Nr correct:</string>
+    <string name="nrWrong">Nr wrong:</string>
+    <string name="wordsLeft">Nr words left:</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <fragment
+            android:id="@+id/settings"
+            android:name="com.example.tdat1337.ovelse7.SettingsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:visibility="invisible"
+    />
+
+    <Button
+            android:id="@+id/backButton"
+            android:onClick="backButtonOnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gå tilbake"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="141dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="141dp"/>
+
+
+</android.support.constraint.ConstraintLayout>

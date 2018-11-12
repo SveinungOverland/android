@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="images">
+
+        <item>@drawable/step0</item>
+        <item>@drawable/step1</item>
+        <item>@drawable/step2</item>
+        <item>@drawable/step3</item>
+        <item>@drawable/step4</item>
+        <item>@drawable/step5</item>
+        <item>@drawable/step6</item>
+        <item>@drawable/step7</item>
+        <item>@drawable/step8</item>
+        <item>@drawable/step9</item>
+        <item>@drawable/step10</item>
+
+    </array>
+
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hangman</string>
+
+    <string name="new_game">Nytt spill</string>
+
+    <string name="success">Du klarte å finne rett ord</string>
+    <string name="failure">Du var uheldig denne gangen, prøv igjen</string>
+    <string name="next">Trykk på hvilken som helst knapp for å fortsette til neste ord</string>
+
+    <string name="info">Slik spiller du: Det blir valgt ett tilfeldig ord, du får kun vite hvor mange bokstaver dette ordet inneholder og skal ved å trykke på bokstavene klare å lage hele ordet uten at personen dør</string>
+
+    <string name="end_game">Avslutt spill</string>
+    <string name="help">Hjelp</string>
+    <string name="back">Gå tilbake</string>
+    <string name="lang">Endre språk</string>
+    <string name="nrCorrect">Antall rett:</string>
+    <string name="nrWrong">Antall feil:</string>
+    <string name="wordsLeft">Antall ord igjen:</string>
+</resources>
