@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
 import java.util.*
 import kotlin.properties.Delegates
@@ -78,12 +79,7 @@ class GameActivity: Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game_layout)
 
-        wordStack
-        images
-
-
-        step = 0
-        left = wordStack.size
+        left = wordStack.size-1
         word = wordStack.peek()
         updateWordProgress()
     }
@@ -93,13 +89,20 @@ class GameActivity: Activity() {
 
     fun buttonOnClick(view: View) {
 
+
         if (waitingState != 0) {
-            waitingState = 0
-            newWord()
+            if(left != 0) {
+                waitingState = 0
+                newWord()
+            } else {
+                Toast.makeText(this, R.string.end_game, Toast.LENGTH_LONG).show()
+                finish()
+            }
             return
         }
 
         view as TextView
+
         val viewChar = view.text[0]
 
         pressedButtons.add(view.id)
@@ -107,18 +110,12 @@ class GameActivity: Activity() {
 
         view.visibility = View.INVISIBLE
 
+        updateWordProgress()
 
         when {
-            step == 10 -> {
-                // User has no more tries and has failed
-                revealWord()
-                waitingState = 2
-                wrong++
-            }
+
             wordStack.peek().contains(viewChar) -> {
                 // User has guessed correct letter
-                updateWordProgress()
-
                 if (!word.contains('_')) {
                     waitingState = 1
                     correct++
@@ -128,6 +125,14 @@ class GameActivity: Activity() {
                 // User has guessed the wrong letter
                 step++
             }
+        }
+
+        if (step == 10) {
+            // User has no more tries and has failed
+            revealWord()
+            waitingState = 2
+            wrong++
+            return
         }
     }
 
@@ -147,6 +152,7 @@ class GameActivity: Activity() {
         resetButtons()
         word = wordStack.peek()
         left--
+        updateWordProgress()
     }
 
     fun resetButtons() = pressedButtons
